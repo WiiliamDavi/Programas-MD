@@ -1,0 +1,23 @@
+conjunto_A = {1, 2, 3, 4, 5, 6 , 7 , 8 , 9} #conjunto A, B e C, armazena os elementos, tanto diferentes quanto iguais.
+conjunto_B = {2, 4, 6, 8}
+conjunto_C = {"a", "e", "i", "o", "u"}
+
+print(f"Conjunto de números: {conjunto_A}")
+print(f"Conjunto de números pares: {conjunto_B}" )#Aqui ele imprime na tela os elementos do conjunto A, B e C, que são os números de 1 a 9, os números pares de 2 a 8 e as vogais do alfabeto.
+print(f"Conjunto de vogais: {conjunto_C}")
+
+x = (input("Digite um número ou uma letra: "))
+if x.isdigit(): # Confere se x contém somente números
+    x = int(x) # Como input() retorna texto, convertemos para inteiro para fazer cálculos
+
+if x in conjunto_A and x in conjunto_B: # Verifica se o elemento está ao mesmo tempo nos conjuntos A e B
+    print(f"O elemento pertence aos conjuntos: {conjunto_A=} e {conjunto_B=}")
+
+elif x in conjunto_A: # Caso não esteja em ambos, verifica se está apenas no conjunto A
+    print(f"O elemento pertence somente ao conjunto: {conjunto_A=}")
+
+elif x in conjunto_C: # Verifica se o elemento pertence ao conjunto C
+    print(f"O elemento pertence ao conjunto: {conjunto_C=}")
+
+else: # Executa se o elemento não for encontrado em nenhum dos conjuntos verificados
+    print(f"O elemento não pertence a nenhum conjunto.")
