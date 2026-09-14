@@ -1,0 +1,5 @@
+conjunto=set(input("Digite os elementos do conjunto (separados por espaço): ").split()) #Ele armazena os elementos digitados pelo usuário em um conjunto, eliminando duplicatas automaticamente.
+len(conjunto) #Aqui ele faz a contagem da quantidade de elementos do conjunto.
+
+print(f"Essa é a quantidade de elementos do conjunto: {len(conjunto)}")#Aqui ele imprime a quantidade de elementos do conjunto na tela.
+print("Quantidade de subconjuntos:", 2 ** len(conjunto)) 
