@@ -1,0 +1,6 @@
+A = {1, 2, 3, 4} # Conjunto A e B, armazena os elementos, tanto diferentes quanto iguais.
+B = {3, 4, 5, 6} 
+
+print("União entre A e B:", A | B) #Une os elementos dos dois conjuntos, eliminando as duplicatas.
+print("Intersecção entre A e B:", A & B) #pega apenas os elementos que estão nos dois conjuntos ao mesmo tempo, e mostra na tela.
+print("Diferença entre A e B:", A - B) #pega apenas os elementos que estão no conjunto A, mas não estão no conjunto B, e mostra na tela.
