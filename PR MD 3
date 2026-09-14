@@ -1,0 +1,4 @@
+A = set(input("Digite os elementos do conjunto A separados por espaço: ").split()) # Armazena os elementos digitados pelo usuário no conjunto A e B, eliminando duplicatas automaticamente.
+B = set(input("Digite os elementos do conjunto B separados por espaço: ").split())  
+
+print("B é subconjunto de A?", B.issubset(A)) # Verifica se o conjunto B é subconjunto de A, ou seja, se todos os elementos de B estão contidos em A.
