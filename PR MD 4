@@ -1,0 +1,16 @@
+from itertools import product #Pega da biblioteca a função "product" que gera o produto cartesiano entre os elementos de um conjunto, ou seja, combina todos os elementos possíveis de dois ou mais conjuntos.
+
+print("1 - AND") #Aqui pergunta ao usuário qual operação lógica ele deseja realizar, AND ou OR.
+print("2 - OR")
+
+operações = input("Escolha: ") #A variável "operações" armazena a escolha do usuário, que será usada para determinar qual operação lógica será realizada.
+
+print("\nP\tQ\t P ^ Q" if operações == "1" else "\nP\tQ\t P v Q") #aqui ele imprime a tabela verdade da operação escolhida pelo usuário, e dependendo da escolha, ele imprime a operação lógica correspondente, AND ou OR.
+for p, q in product([True, False], repeat=2): #Realiza todas as combinações possíveis da função P e Q, que são os valores booleanos True e False, e repete o processo duas vezes para gerar todas as combinações possíveis de P e Q.
+
+    if operações == "1": #se for escolhido a operação AND, ele realiza a operação lógica "and" ou "^ (sinal da função AND)" entre os valores de P e Q. 
+        resultado = p and q    
+    elif operações == "2": #se for escolhido a operação OR, ele realiza a operação lógica "or" ou "v (sinal da função OR)" entre os valores de P e Q.
+        resultado = p or q
+
+    print(f"{p}\t{q}\t{resultado} ") #aqui ele imprime os valores de P, Q e o resultado da operação lógica escolhida pelo usuário, em formato de tabela verdade.
