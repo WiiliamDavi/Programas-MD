@@ -1,0 +1,212 @@
+Algoritmo "Escala_Medicos"
+
+Var
+   manhaCG, manhaPed, manhaCir : real
+   tardeCG, tardePed, tardeCir : real
+   noiteCG, noitePed, noiteCir : real
+   somaManha, somaTarde, somaNoite, somaGeral : real
+   opcao : caractere
+   i : inteiro
+   confirmado : inteiro
+
+Inicio
+
+   // =========================
+   // TURNO DA MANHA
+   // =========================
+   confirmado <- 0
+
+   Para i de 1 ate 100 faca
+      Se confirmado = 0 Entao
+
+         Escreval()
+         Escreval("=== TURNO DA MANHA ===")
+
+         Escreva("Clinicos Gerais: ")
+         Leia(manhaCG)
+
+         Se (manhaCG < 0) OU (manhaCG > 140) OU (manhaCG <> int(manhaCG)) Entao
+            Escreval("ERRO! Digite um numero inteiro entre 0 e 140.")
+         Senao
+            Escreva("Pediatras: ")
+            Leia(manhaPed)
+
+            Se (manhaPed < 0) OU (manhaPed > 140) OU (manhaPed <> int(manhaPed)) Entao
+               Escreval("ERRO! Digite um numero inteiro entre 0 e 140.")
+            Senao
+               Escreva("Cirurgioes: ")
+               Leia(manhaCir)
+
+               Se (manhaCir < 0) OU (manhaCir > 140) OU (manhaCir <> int(manhaCir)) Entao
+                  Escreval("ERRO! Digite um numero inteiro entre 0 e 140.")
+               Senao
+                  Escreval()
+                  Escreval("Clinicos: ", manhaCG)
+                  Escreval("Pediatras: ", manhaPed)
+                  Escreval("Cirurgioes: ", manhaCir)
+
+                  Para i de 1 ate 100 faca
+                     Se (opcao <> "S") E (opcao <> "s") E (opcao <> "N") E (opcao <> "n") Entao
+                        Escreva("Confirmar? [S/N]: ")
+                        Leia(opcao)
+
+                        Se (opcao <> "S") E (opcao <> "s") E (opcao <> "N") E (opcao <> "n") Entao
+                           Escreval("ERRO! Digite somente S ou N.")
+                        Fimse
+                     Fimse
+                  Fimpara
+
+                  Se (opcao = "S") OU (opcao = "s") Entao
+                     confirmado <- 1
+                  Senao
+                     opcao <- ""
+                  Fimse
+               Fimse
+            Fimse
+         Fimse
+
+      Fimse
+   Fimpara
+
+   // =========================
+   // TURNO DA TARDE
+   // =========================
+   confirmado <- 0
+   opcao <- ""
+
+   Para i de 1 ate 100 faca
+      Se confirmado = 0 Entao
+
+         Escreval()
+         Escreval("=== TURNO DA TARDE ===")
+
+         Escreva("Clinicos Gerais: ")
+         Leia(tardeCG)
+
+         Se (tardeCG < 0) OU (tardeCG > 140) OU (tardeCG <> int(tardeCG)) Entao
+            Escreval("ERRO! Digite um numero inteiro entre 0 e 140.")
+         Senao
+            Escreva("Pediatras: ")
+            Leia(tardePed)
+
+            Se (tardePed < 0) OU (tardePed > 140) OU (tardePed <> int(tardePed)) Entao
+               Escreval("ERRO! Digite um numero inteiro entre 0 e 140.")
+            Senao
+               Escreva("Cirurgioes: ")
+               Leia(tardeCir)
+
+               Se (tardeCir < 0) OU (tardeCir > 140) OU (tardeCir <> int(tardeCir)) Entao
+                  Escreval("ERRO! Digite um numero inteiro entre 0 e 140.")
+               Senao
+                  Escreval()
+                  Escreval("Clinicos: ", tardeCG)
+                  Escreval("Pediatras: ", tardePed)
+                  Escreval("Cirurgioes: ", tardeCir)
+
+                  Para i de 1 ate 100 faca
+                     Se (opcao <> "S") E (opcao <> "s") E (opcao <> "N") E (opcao <> "n") Entao
+                        Escreva("Confirmar? [S/N]: ")
+                        Leia(opcao)
+
+                        Se (opcao <> "S") E (opcao <> "s") E (opcao <> "N") E (opcao <> "n") Entao
+                           Escreval("ERRO! Digite somente S ou N.")
+                        Fimse
+                     Fimse
+                  Fimpara
+
+                  Se (opcao = "S") OU (opcao = "s") Entao
+                     confirmado <- 1
+                  Senao
+                     opcao <- ""
+                  Fimse
+               Fimse
+            Fimse
+         Fimse
+
+      Fimse
+   Fimpara
+
+   // =========================
+   // TURNO DA NOITE
+   // =========================
+   confirmado <- 0
+   opcao <- ""
+
+   Para i de 1 ate 100 faca
+      Se confirmado = 0 Entao
+
+         Escreval()
+         Escreval("=== TURNO DA NOITE ===")
+
+         Escreva("Clinicos Gerais: ")
+         Leia(noiteCG)
+
+         Se (noiteCG < 0) OU (noiteCG > 140) OU (noiteCG <> int(noiteCG)) Entao
+            Escreval("ERRO! Digite um numero inteiro entre 0 e 140.")
+         Senao
+            Escreva("Pediatras: ")
+            Leia(noitePed)
+
+            Se (noitePed < 0) OU (noitePed > 140) OU (noitePed <> int(noitePed)) Entao
+               Escreval("ERRO! Digite um numero inteiro entre 0 e 140.")
+            Senao
+               Escreva("Cirurgioes: ")
+               Leia(noiteCir)
+
+               Se (noiteCir < 0) OU (noiteCir > 140) OU (noiteCir <> int(noiteCir)) Entao
+                  Escreval("ERRO! Digite um numero inteiro entre 0 e 140.")
+               Senao
+                  Escreval()
+                  Escreval("Clinicos: ", noiteCG)
+                  Escreval("Pediatras: ", noitePed)
+                  Escreval("Cirurgioes: ", noiteCir)
+
+                  Para i de 1 ate 100 faca
+                     Se (opcao <> "S") E (opcao <> "s") E (opcao <> "N") E (opcao <> "n") Entao
+                        Escreva("Confirmar? [S/N]: ")
+                        Leia(opcao)
+
+                        Se (opcao <> "S") E (opcao <> "s") E (opcao <> "N") E (opcao <> "n") Entao
+                           Escreval("ERRO! Digite somente S ou N.")
+                        Fimse
+                     Fimse
+                  Fimpara
+
+                  Se (opcao = "S") OU (opcao = "s") Entao
+                     confirmado <- 1
+                  Senao
+                     opcao <- ""
+                  Fimse
+               Fimse
+            Fimse
+         Fimse
+
+      Fimse
+   Fimpara
+
+   // =========================
+   // RELATORIO
+   // =========================
+   somaManha <- manhaCG + manhaPed + manhaCir
+   somaTarde <- tardeCG + tardePed + tardeCir
+   somaNoite <- noiteCG + noitePed + noiteCir
+   somaGeral <- somaManha + somaTarde + somaNoite
+
+   Escreval()
+   Escreval("=== RELATORIO GERAL ===")
+   Escreval("Manha: ", somaManha)
+   Escreval("Tarde: ", somaTarde)
+   Escreval("Noite: ", somaNoite)
+   Escreval("Total: ", somaGeral)
+
+   Se somaGeral > 140 Entao
+      Escreval("ERRO: mais de 140 medicos.")
+   Senao
+      Se (manhaCG >= 2) E (manhaPed >= 1) E (manhaCir >= 1) E (tardeCG >= 2) E (tardePed >= 1) E (tardeCir >= 1) E (noiteCG >= 2) E (noitePed >= 1) E (noiteCir >= 1) Entao
+         Escreval("O PLANTAO PODE SER PUBLICADO!")
+      Senao
+         Escreval("O PLANTAO NAO PODE SER PUBLICADO.")
+      Fimse
+   Fimse
+
+Fimalgoritm
